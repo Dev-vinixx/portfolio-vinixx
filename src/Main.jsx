@@ -19,7 +19,7 @@ function Main() {
     };
   }, []);
 
-  const limite = 2;
+  const limite = 3;
 
   const imgInitialPos = { x: -50, y: -50 };
 
