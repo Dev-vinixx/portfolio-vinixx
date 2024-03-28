@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+:root {
+  --inter: "Inter", sans-serif;
+  --source-serif: "Source Serif 4", serif;
+  --roboto: "Roboto", sans-serif;
+  --pt-sans: "PT Sans", sans-serif;
+  --roboto-condensed: "Roboto Condensed", sans-serif;
+  --black: #292929;
+  --green: #598C6B;
+  --white: #fff;
+  --light-green: #8ac79f;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: currentColor;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+.imgBackground {
+  opacity: 0.45;
+  position: fixed;
+  left: 35%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  min-width: 80vw;
+  max-width: 80vw;
+  min-height: 80vh;
+  max-height: 80vh;
+}
+.sla {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
