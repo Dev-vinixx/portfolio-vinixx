@@ -25,7 +25,7 @@ body {
   position: relative;
 }
 .imgBackground {
-  opacity: 0.45;
+  opacity: 0.28;
   position: fixed;
   left: 35%;
   top: 57%;
@@ -34,10 +34,4 @@ body {
   max-width: 80vw;
   min-height: 80vh;
   max-height: 80vh;
-}
-.sla {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
