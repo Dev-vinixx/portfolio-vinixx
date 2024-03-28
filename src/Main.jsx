@@ -1,7 +1,7 @@
 import Header from "./components/header/Header";
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import imgBackground from './assets/react.svg';
+import imgBackground from '.src/assets/react.svg';
 
 function Main() {
 
