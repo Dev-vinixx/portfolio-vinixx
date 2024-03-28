@@ -26,8 +26,8 @@ function Main() {
 
   // Calcula a posição da imagem com base na posição do mouse
   const imgPos = {
-    x: imgInitialPos.x - limite / 1 + mousePos.x / window.innerWidth * limite,
-    y: imgInitialPos.y - limite / 1 + mousePos.y / window.innerHeight * limite
+    x: imgInitialPos.x - limite / 0.5 + mousePos.x / window.innerWidth * limite,
+    y: imgInitialPos.y - limite / 0.5 + mousePos.y / window.innerHeight * limite
   };
 
   // Cria a animação
