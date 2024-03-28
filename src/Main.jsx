@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import imgBackground from './assets/react.svg';
 
 function Main() {
 
@@ -31,7 +32,7 @@ function Main() {
 
   return (
     <main>
-      <animated.img className="imgBackground" src="../assets/react.svg" alt="" style={props} />
+      <animated.img className={imgBackground} src="./assets" alt="" style={props} />
       <Header />
     </main>
   );
