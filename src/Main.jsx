@@ -24,8 +24,8 @@ function Main() {
   const imgInitialPos = { x: -50, y: -50 };
 
   const imgPos = {
-    x: imgInitialPos.x - limite / 0.5 + mousePos.x / window.innerWidth * limite,
-    y: imgInitialPos.y - limite / 0.5 + mousePos.y / window.innerHeight * limite
+    x: imgInitialPos.x - limite / 0.1 + mousePos.x / window.innerWidth * limite,
+    y: imgInitialPos.y - limite / 0.1 + mousePos.y / window.innerHeight * limite
   };
 
   const props = useSpring({ transform: `translate(${imgPos.x}%, ${imgPos.y}%)` });
