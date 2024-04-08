@@ -11,14 +11,18 @@ function Home() {
   const handleMouseLeave = () => {
     setActiveIcon(null);
   };
+  const openLink = (url) => {
+    window.open(url, '_blank');
+    window.focus();
+  }
 
   return (
     <section className={styles.home}>
       <div className={styles.divAboutText}>
-        <p className={styles.hello}>Olá 👋, eu me chamo</p>
+        <p className={styles.hello}>Hello 👋, my name is</p>
         <p className={styles.name}>Vinicius Santos</p>
         <p className={styles.aboutTextOfVinixx}>
-          I am a full-stack web developer, primarily focused on front-end development, but I am also proficient in back-end work. My dominant language is React.js.
+        I am a full stack developer but my focus is on the front end and my dominant language is React JS.
         </p>
       </div>
       <div className={styles.divIcons}>
@@ -26,6 +30,10 @@ function Home() {
           className={`${styles.lineIcon} ${activeIcon === 'email' ? styles.active : ''}`}
           onMouseEnter={() => handleMouseEnter('email')}
           onMouseLeave={handleMouseLeave}
+          onClick={ () => {
+            openLink('mailto:viniciuseduardo0500@gmail.com')
+          }
+          }
         >
           <span className={`${styles.spanIconE}`}></span>
           <p className={styles.email}>E</p>
@@ -37,6 +45,10 @@ function Home() {
           className={`${styles.lineIcon} ${activeIcon === 'github' ? styles.active : ''}`}
           onMouseEnter={() => handleMouseEnter('github')}
           onMouseLeave={handleMouseLeave}
+          onClick={ () => {
+            openLink('https://github.com/Dev-vinixx')
+           }
+          }
         >
           <span className={`${styles.spanIconG}`}></span>
           <p className={styles.GitHub}>G</p>
@@ -48,6 +60,7 @@ function Home() {
           className={`${styles.lineIcon} ${activeIcon === 'Linkedin' ? styles.active : ''}`}
           onMouseEnter={() => handleMouseEnter('Linkedin')}
           onMouseLeave={handleMouseLeave}
+          onClick={() => openLink('https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/')}
         >
           <span className={`${styles.spanIconL}`}></span>
           <p className={styles.linkedin}>L</p>

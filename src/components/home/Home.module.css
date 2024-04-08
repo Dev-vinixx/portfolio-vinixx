@@ -45,7 +45,7 @@
  max-height: 11vh;
  position: absolute;
  left: 64%;
- top: 83%;
+ top: 71%;
  transform: translate(-50%, -50%);
  display: flex;
  justify-content: center;
@@ -83,7 +83,7 @@
 .spanIconL::before {
  content: '';
  position: absolute;
- top: 57%;
+ top: 54%;
  z-index: 2;
  min-width: 75px;
  max-width: 75px;
@@ -95,17 +95,17 @@
 }
 .spanIconE::before {
  left: 49%; 
- background-color: #b10a0a;
+ background-color: var(--green);
 }
 .spanIconG::before {
  left: 50%;
- background-color: black;
+ background-color: var(--green);
 }
 .spanIconL::before {
  left: 51%;
- background-color: #0a66c2; 
+ background-color: var(--green); 
 }
-.lineIcon p {
+.lineIcon p, .lineIcon a {
  z-index: 4;
  font-family: var(--roboto);
  font-weight: 700;
@@ -115,19 +115,19 @@
 .lineIcon:hover  .spanIconE:before,
 .lineIcon:hover  .spanIconG:before,
 .lineIcon:hover  .spanIconL:before {
- top: 43%;
+ top: 45%;
 }
-.lineIcon:hover p {
+.lineIcon:hover p, .lineIcon:hover a {
  transform: scale(1.1);
 }
 .linkedin {
- color: #0a66c2;
+ color: var(--green);
 }
 .GitHub {
- color: #000;
+ color: var(--green);
 }
 .email {
- color: #b10a0a;
+ color: var(--green);
 }
 .infoEmail, .infoGitHub, .infoLinkedin{
  width: 11vw;
@@ -144,19 +144,19 @@
  top: -10%;
 }
 .infoEmail {
- border-bottom: 3px solid #b10a0a;
- color: #b10a0a;
+ border-bottom: 3px solid var(--green);
+ color: var(--green);
 }
 .infoWhatsApp p, .infoGitHub p, .infoLinkedin p {
   font-size: 1.1rem;
 }
 .infoGitHub {
- border-bottom: 3px solid #000;
- color: #000;
+ border-bottom: 3px solid var(--green);
+ color: var(--green);
 }
 .infoLinkedin {
- border-bottom: 3px solid #0a66c2;
- color: #0a66c2;
+ border-bottom: 3px solid var(--green);
+ color: var(--green);
 }
 .animationForUp {
  animation: toUp 0.3s ease-in forwards;
@@ -169,7 +169,7 @@
   transform: translate(-50%,-50%);
  }
  to {
-  opacity: 1;
+  opacity: 0.7;
   top: -38%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -180,7 +180,7 @@
 }
 @keyframes toDown {
  from {
-  opacity: 1;
+  opacity: 0.7;
   top: -38%;
   left: 50%;
   transform: translate(-50%,-50%);
