@@ -1,5 +1,6 @@
 import styles from '../header/Header.module.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -13,16 +14,16 @@ function Header() {
     <ul className={styles.ulList}>
      <li className={`${styles.linkList} ${focus == "home" ? styles.inFocus : styles.noFocus}`} onClick={() => {
       setFocus("home")
-     }}>Home</li>
+     }}><Link to="/">Home</Link></li>
      <li className={`${styles.linkList} ${focus == "about" ? styles.inFocus : styles.noFocus}`} onClick={() => {
       setFocus("about")
-     }}>About</li>
+     }}><Link to="/about">About</Link></li>
      <li className={`${styles.linkList} ${focus == "projects" ? styles.inFocus : styles.noFocus}`} onClick={() => {
       setFocus("projects")
-     }}>Projects</li>
+     }}><Link to="/projects">Projects</Link></li>
      <li className={`${styles.linkList} ${focus == "contact" ? styles.inFocus : styles.noFocus}`} onClick={() => {
       setFocus("contact")
-     }}>Contact</li>
+     }}><Link to="/contact">Contact</Link></li>
     </ul>
    </nav>
    <button className={styles.buttonTogle} onClick={() => {

@@ -1,11 +1,14 @@
-import Header from "./components/header/Header";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
+import Header from './components/header/Header';
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import imgBackground from './assets/react.svg';
-import Home from "./components/home/Home";
 
 function Main() {
-
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event) => {
@@ -33,13 +36,16 @@ function Main() {
 
   return (
     <main>
-      
-      <Header />
-
-      <Home />
-
-
-      <animated.img className="imgBackground" src={imgBackground} alt="" style={props} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <animated.img className="imgBackground" src={imgBackground} alt="" style={props} />
+      </Router>
     </main>
   );
 }
