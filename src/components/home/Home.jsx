@@ -1,4 +1,5 @@
 import styles from '../home/Home.module.css';
+import { useState, useEffect } from 'react';
 
 function Home() {
   const openLink = (url) => {
@@ -6,20 +7,52 @@ function Home() {
     window.focus();
   }
 
-  return (
-    <section className={styles.home}>
-      <div className={styles.divAbout}>
+  const ENGLISH = [
+    (
+      <div key="divEnglish" className={styles.divAbout}>
         <p className={styles.first_text}>Hello 👋, my name is</p>
         <p className={styles.second_text}>Vinicius Santos</p>
         <p className={styles.third_text}>I am a <strong>full stack developer</strong> but my <br /> focus is on the front end and my<br /><strong>dominant</strong> language is <strong>React JS</strong>.</p>
       </div>
+    )
+  ]
+  const PORTUGUESE = [
+    (
+      <div key="divPortuguese" className={styles.divAbout}>
+        <p className={styles.first_text}>Olá 👋, meu nome é</p>
+        <p className={styles.second_text}>Vinicius Santos</p>
+        <p className={styles.third_text}>Eu sou um <strong>desenvolvedor full stack</strong>,<br /> mas meu  foco é no front end e minha<br /><strong>linguagem dominante</strong> é o <strong>React JS</strong>.</p>
+      </div>
+    )
+  ]
+
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'EN');
+  const [trigger, setTrigger] = useState(0); 
+
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setLanguage(localStorage.getItem('language'));
+      setTrigger(prevTrigger => prevTrigger + 1); 
+    };
+
+    window.addEventListener('languageChange', handleLanguageChange);
+
+    return () => {
+      window.removeEventListener('languageChange', handleLanguageChange);
+    };
+  }, []);
+
+  return (
+    <section className={styles.home}>
+      {language == "EN" ? ENGLISH : PORTUGUESE}
+
       <div className={styles.divIcons}>
         <div className={styles.icon}
-        onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src="src\assets\home\email-svg.svg" alt="" /></div>
+          onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src="src\assets\home\email-svg.svg" alt="" /></div>
         <div className={styles.icon}
-        onClick={() => openLink("https://github.com/Dev-vinixx")}><img src="src\assets\home\github-svg.svg" alt="" /></div>
+          onClick={() => openLink("https://github.com/Dev-vinixx")}><img src="src\assets\home\github-svg.svg" alt="" /></div>
         <div className={styles.icon}
-        onClick={() => openLink("https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/")}><img src="src\assets\home\linkedin-svg.svg" alt="" /></div>
+          onClick={() => openLink("https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/")}><img src="src\assets\home\linkedin-svg.svg" alt="" /></div>
       </div>
     </section>
   );

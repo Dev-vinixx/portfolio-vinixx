@@ -34,6 +34,7 @@ function Main() {
 
   const props = useSpring({ transform: `translate(${imgPos.x}%, ${imgPos.y}%)` });
 
+
   return (
     <main>
       <Router>
