@@ -1,5 +1,6 @@
-import styles from '../home/Home.module.css';
 import { useState, useEffect } from 'react';
+import styles from '../home/Home.module.css';
+import emailImage from '/src/assets/home-img/email-svg.svg';
 
 function Home() {
   const openLink = (url) => {
@@ -48,7 +49,7 @@ function Home() {
 
       <div className={styles.divIcons}>
         <div className={styles.icon}
-          onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src="./src/assets/home/email-svg.svg" alt="" /></div>
+          onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src={emailImage} alt="" /></div>
         <div className={styles.icon}
           onClick={() => openLink("https://github.com/Dev-vinixx")}><img src="./src/assets/home/github-svg.svg" alt="" /></div>
         <div className={styles.icon}
