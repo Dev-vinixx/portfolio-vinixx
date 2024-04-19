@@ -34,4 +34,5 @@ body {
   max-width: 80vw;
   min-height: 80vh;
   max-height: 80vh;
+  z-index: -1;
 }

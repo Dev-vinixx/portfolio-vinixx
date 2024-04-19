@@ -20,7 +20,7 @@ function Main() {
     };
   }, []);
 
-  const limite = 3;
+  const limite = 2;
 
   const imgInitialPos = { x: -50, y: -50 };
 
@@ -33,9 +33,13 @@ function Main() {
 
   return (
     <main>
-      <animated.img className="imgBackground" src={imgBackground} alt="" style={props} />
+      
       <Header />
+
       <Home />
+
+
+      <animated.img className="imgBackground" src={imgBackground} alt="" style={props} />
     </main>
   );
 }
