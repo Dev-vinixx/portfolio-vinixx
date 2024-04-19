@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import styles from '../home/Home.module.css';
 import emailImage from '/src/assets/home-img/email-svg.svg';
+import githubImage from '/src/assets/home-img/github-svg.svg';
+import linkedinImage from '/src/assets/home-img/linkedin-svg.svg';
 
 function Home() {
   const openLink = (url) => {
@@ -51,9 +53,9 @@ function Home() {
         <div className={styles.icon}
           onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src={emailImage} alt="" /></div>
         <div className={styles.icon}
-          onClick={() => openLink("https://github.com/Dev-vinixx")}><img src="./src/assets/home/github-svg.svg" alt="" /></div>
+          onClick={() => openLink("https://github.com/Dev-vinixx")}><img src={githubImage} alt="" /></div>
         <div className={styles.icon}
-          onClick={() => openLink("https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/")}><img src="./src/assets/home/linkedin-svg.svg" alt="" /></div>
+          onClick={() => openLink("https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/")}><img src={linkedinImage} alt="" /></div>
       </div>
     </section>
   );
