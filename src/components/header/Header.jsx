@@ -7,13 +7,25 @@ function Header() {
   const [focus, setFocus] = useState("home");
   const [language, setLanguage] = useState("EN");
   const [right, setRight] = useState(true);
+    
+  const [dalay, setDalay] = useState(false);
 
   const handleLanguageChange = () => {
-    setRight(!right);
-    const newLanguage = language == "EN" ? "BR" : "EN";
-    setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
-    window.dispatchEvent(new Event('languageChange'));
+    if (dalay == false) {
+    setToBig(true);
+    setDalay(true);
+    setTimeout(() => {
+      setRight(!right);
+      const newLanguage = language == "EN" ? "BR" : "EN";
+      setLanguage(newLanguage);
+      localStorage.setItem('language', newLanguage);
+      window.dispatchEvent(new Event('languageChange'));
+      setTimeout(() => {
+        setToBig(false);
+        setDalay(false);
+      }, 500);
+    }, 1000);
+  }
   };
 
   const BR = [
@@ -28,6 +40,8 @@ function Header() {
     "Projects",
     "Contact"
   ]
+
+  const [toBig, setToBig] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -48,7 +62,7 @@ function Header() {
           }}><Link to="/contact">{language == "EN" ? EN[3] : BR[3]}</Link></li>
         </ul>
       </nav>
-      <button className={styles.buttonTogle} onClick={handleLanguageChange}><span className={`${styles.togleLanguageLeft} ${right ? styles.toLeft : styles.toRight}`}></span><span className={`${styles.togleLanguageRight} ${!right ? styles.toLeft : styles.toRight}`}></span><p className={`${styles.defaltLanguage} ${right ? styles.toGreen : styles.toWhite}`}>{language}</p></button>
+      <button className={styles.buttonTogle} onClick={handleLanguageChange}><span className={`${styles.togleLanguageLeft} ${right ? styles.toLeft : styles.toRight}`}></span><span className={`${styles.togleLanguageRight} ${!right ? styles.toLeft : styles.toRight} ${toBig ? styles.toBig : null}`}></span><p className={`${styles.defaltLanguage} ${right ? styles.toGreen : styles.toWhite}`}>{language}</p></button>
     </header>
   )
 }

@@ -60,6 +60,7 @@
  background-color: transparent;
  border: none;
  position: relative;
+ z-index: 17;
 }
 .togleLanguageLeft{
  width: 33px;
@@ -139,5 +140,19 @@
  }
  to {
   color: var(--white);
+ }
+}
+.toBig {
+ animation: toBig 1.5s linear forwards;
+}
+@keyframes toBig {
+ 0% {
+  transform: translate(-50%, -50%) scale(1);
+ }
+ 50% {
+  transform: translate(-50%, -50%) scale(100);
+ }
+ 100%{
+  transform: translate(-50%, -50%) scale(1);
  }
 }

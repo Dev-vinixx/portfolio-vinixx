@@ -28,7 +28,6 @@ function Home() {
       </div>
     )
   ]
-
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'EN');
   const [trigger, setTrigger] = useState(0); 
 
