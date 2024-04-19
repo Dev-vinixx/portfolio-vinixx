@@ -48,11 +48,11 @@ function Home() {
 
       <div className={styles.divIcons}>
         <div className={styles.icon}
-          onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src="src\assets\home\email-svg.svg" alt="" /></div>
+          onClick={() => openLink("mailto:viniciuseduardo0500@gmail.com?subject=Assunto&body=Mensagem")}><img src="./src\assets\home\email-svg.svg" alt="" /></div>
         <div className={styles.icon}
-          onClick={() => openLink("https://github.com/Dev-vinixx")}><img src="src\assets\home\github-svg.svg" alt="" /></div>
+          onClick={() => openLink("https://github.com/Dev-vinixx")}><img src="./src\assets\home\github-svg.svg" alt="" /></div>
         <div className={styles.icon}
-          onClick={() => openLink("https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/")}><img src="src\assets\home\linkedin-svg.svg" alt="" /></div>
+          onClick={() => openLink("https://www.linkedin.com/in/vin%C3%ADcius-rodrigues-17a825280/")}><img src="./src\assets\home\linkedin-svg.svg" alt="" /></div>
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ function Header() {
     const newLanguage = language == "EN" ? "BR" : "EN";
     setLanguage(newLanguage);
     localStorage.setItem('language', newLanguage);
-    window.dispatchEvent(new Event('languageChange')); 
+    window.dispatchEvent(new Event('languageChange'));
   };
 
   const BR = [
