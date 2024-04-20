@@ -3,4 +3,48 @@
  max-width: 100vw;
  min-height: 100vh;
  max-height: 100vh;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.divTitle {
+ font-family: var(--pt-sans);
+ color: var(--black);
+ position: absolute;
+ left: 50%;
+ top: 13%;
+ transform: translate(-50%, -50%);
+ font-size: 1.9rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.decorationAbout{
+ content: "";
+ width: 150px;
+ height: 5px;
+ background-color: var(--green);
+ border-radius: 15px;
+}
+.divContent {
+ min-width: 80vw;
+ max-width: 80vw;
+ min-height: 65vh;
+ max-height: 65vh;
+ border: 2px solid var(--green);
+ margin-top: 150px;
+}
+.goProjects {
+ width: 50px;
+ height: 50px;
+ padding: 5px;
+ background-color: #d4f7e0;
+ border: 2px solid var(--green);
+ border-radius: 50%;
+ cursor: pointer;
+ position: absolute;
+ left: 50%;
+ top: 95%;
+ transform: translate(-50%, -50%);
 }
