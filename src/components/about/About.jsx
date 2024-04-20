@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import styles from '../about/About.module.css';
 import reactImg from  '/src/assets/react.svg';
 
@@ -8,7 +8,7 @@ function About () {
   let animation;
   let angle = 0;
   const limitTop = 85;
-  const navigate = useNavigate(); // Get the navigate function
+  const navigate = useNavigate();
 
   const startRotation = () => {
     animation = setInterval(() => {
@@ -41,7 +41,7 @@ function About () {
     setTimeout(() => {
       goProjectsRef.current.style.transition = '';
       if (goProjectsRef.current.style.top === '95%') {
-        navigate('/projects'); // Navigate to /projects
+        navigate('/projects');
       }
     }, 500);
   };
@@ -70,7 +70,7 @@ function About () {
         <span className={styles.decorationAbout}></span>
       </div>
       <div className={styles.headerOptions}>
-        
+
       </div>
       <div className={styles.divContent}>
 
