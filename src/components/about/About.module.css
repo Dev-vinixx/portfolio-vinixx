@@ -26,14 +26,31 @@
  height: 5px;
  background-color: var(--green);
  border-radius: 15px;
+ margin-top: 5px;
+}
+.headerOptions {
+ margin-top: 150px;
+ min-width: 80vw;
+ max-width: 80vw;
+ min-height: 6vh;
+ max-height: 6vh;
+ border: 2px solid var(--green);
+ border-radius: 9px 9px 2px 2px;
+ border-bottom: 2px solid #89b899a4;
+ border-left: 2px solid #89b899;
+ border-right: 2px solid #89b899;
 }
 .divContent {
  min-width: 80vw;
  max-width: 80vw;
- min-height: 65vh;
- max-height: 65vh;
- border: 2px solid var(--green);
- margin-top: 150px;
+ min-height: 58vh;
+ max-height: 58vh;
+ margin-top: 5px;
+ border-radius: 0 0 15px 15px;
+ border-bottom: 2px solid var(--green);
+ border-top: 0px solid;
+ border-left: 2px solid #89b899;
+ border-right: 2px solid #89b899;
 }
 .goProjects {
  width: 50px;

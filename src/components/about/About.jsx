@@ -69,6 +69,9 @@ function About () {
         <h1>About Me</h1>
         <span className={styles.decorationAbout}></span>
       </div>
+      <div className={styles.headerOptions}>
+        
+      </div>
       <div className={styles.divContent}>
 
       </div>
