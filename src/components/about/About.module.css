@@ -71,8 +71,32 @@
  max-height: 58vh;
  border-radius: 0 0 9px 9px;
  margin-top: 7px;
-    position: relative;
-    box-shadow: 0 0 10px -1px #8cbb9c, 0 0 10px -1px #a8c9b4, 0 0 10px -1px #e3ece6;
+ position: relative;
+ box-shadow: 0 0 10px -1px #8cbb9c, 0 0 10px -1px #a8c9b4, 0 0 10px -1px #e3ece6;
+ padding-inline: 20px;
+ padding-block: 12px;
+ display: flex;
+ flex-direction: column;
+}
+.titleContent, .content {
+ font-family: var(--roboto);
+}
+.titleContent {
+ font-weight: 700;
+ font-size: 1.4rem;
+}
+.titleContent span {
+ color: var(--green);
+}
+.content {
+ font-size: 1.6rem;
+ font-weight: 500;
+ margin-block: auto;
+ letter-spacing: 2px;
+}
+.content span {
+    font-weight: 600;
+    color: var(--green);
 }
 .goProjects {
  width: 50px;
