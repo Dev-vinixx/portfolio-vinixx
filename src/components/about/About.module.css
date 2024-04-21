@@ -29,14 +29,40 @@
  margin-top: 5px;
 }
 .headerOptions {
- margin-top: 150px;
+ margin-top: 157px;
  min-width: 80vw;
  max-width: 80vw;
  min-height: 6vh;
  max-height: 6vh;
- border: 2px solid #95c5a5;
  border-radius: 9px 9px 0 0;
- border-bottom: 1px solid #cbdbd0a1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 25px;
+ padding-inline: 5px;
+ box-shadow: 0 0 5px 1px #8cbb9c, 0 0 5px 1px #a8c9b4, 0 0 5px 1px #e3ece6;
+}
+.headerOptions li{
+ font-family: var(--roboto);
+ font-weight: 600;
+ font-size: 1.1rem;
+ padding-inline: 5px;
+ transition: 0.3s ease-in;
+ cursor: pointer;
+}
+.inFocus {
+ border-right: 2px solid var(--green);
+ color: var(--green);
+}
+.inFocus:hover {
+ transform: scale(0.98);
+}
+.noFocus {
+ border-right: 2px solid transparent;
+ color: var(--black);
+}
+.noFocus:hover {
+ color: var(--light-green);
 }
 .divContent {
  min-width: 80vw;
@@ -44,8 +70,9 @@
  min-height: 58vh;
  max-height: 58vh;
  border-radius: 0 0 9px 9px;
- border: 2px solid #95c5a5;
- border-top: 0;
+ margin-top: 7px;
+    position: relative;
+    box-shadow: 0 0 10px -1px #8cbb9c, 0 0 10px -1px #a8c9b4, 0 0 10px -1px #e3ece6;
 }
 .goProjects {
  width: 50px;

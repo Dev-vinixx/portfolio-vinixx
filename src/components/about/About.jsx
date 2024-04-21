@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../about/About.module.css';
 import reactImg from  '/src/assets/react.svg';
@@ -63,17 +63,30 @@ function About () {
     };
   }, []);
 
+  const [focus, setFocus] = useState("Biography");
+
   return (
     <section className={styles.about}>
       <div className={styles.divTitle}>
         <h1>About Me</h1>
         <span className={styles.decorationAbout}></span>
       </div>
-      <div className={styles.headerOptions}>
-
+      <div>
+        <ul className={styles.headerOptions}>
+          <li className={focus == "Biography" ? styles.inFocus : styles.noFocus}
+          onClick={() => setFocus("Biography")}>Biography</li>
+          <li className={focus == "WorkExperience" ? styles.inFocus : styles.noFocus}
+          onClick={() => setFocus("WorkExperience")}>Work Experience</li>
+          <li className={focus == "AcademicBackground" ? styles.inFocus : styles.noFocus}
+          onClick={() => setFocus("AcademicBackground")}>Academic Background</li>
+          <li className={focus == "FutureGoals" ? styles.inFocus : styles.noFocus}
+          onClick={() => setFocus("FutureGoals")}>Future Goals</li>
+          <li className={focus == "WorkPhilosophy" ? styles.inFocus : styles.noFocus}
+          onClick={() => setFocus("WorkPhilosophy")}>Work Philosophy</li>
+        </ul>
       </div>
       <div className={styles.divContent}>
-
+        
       </div>
       <div className={styles.divProjects}>
         <img ref={goProjectsRef} src={reactImg} className={styles.goProjects} alt="" draggable="true" />
