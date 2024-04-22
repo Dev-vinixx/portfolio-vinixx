@@ -49,6 +49,7 @@
  padding-inline: 5px;
  transition: 0.3s ease-in;
  cursor: pointer;
+ white-space: nowrap;
 }
 .inFocus {
  border-right: 2px solid var(--green);
@@ -91,7 +92,7 @@
 .content {
  font-size: 1.6rem;
  font-weight: 500;
- margin-block: auto;
+ margin-top: 35px;
  letter-spacing: 2px;
 }
 .content span {
